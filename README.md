@@ -2,7 +2,7 @@
 Spike-Search este o aplicatie folosita pentru a gasi cuvinte in 
 fisierele dintr-un director prestabilit de utilizator
 
-##Necesitati
+## Necesitati
 Pentru ca totul sa functioneze in parametrii normali trebuie ca
 in cazul in care nu ai instalat pip3 sa inserezi urmatoarea comanda
 ...
@@ -14,7 +14,7 @@ pip3 --version
 pip 18.1 from /usr/lib/python3/dist-packages/pip (python 3.7)
 ...
 
-##Instalare si rulare
+## Instalare si rulare
 Pentru a instala aplicatia trebuie rulata comanda 
 ...
 make config
@@ -29,7 +29,7 @@ sau
 ...
 ./Spike-Search
 ...
-##Utilizare 
+## Utilizare 
 Dupa rularea aplicatiei prima fereastra va cere un numele folderului 
 in care se afla fiseirele in care vrei sa cauti.
 
@@ -46,7 +46,7 @@ _Ii doresc bafta lui Dorin si sper sa puna vorba aia buna mentorilor :)_
 
 
 
-##Despre aplicatie ( detalii )
+## Despre aplicatie ( detalii )
 Aplicatia este scrisa in Python si foloseste numpy pentru a manipula
 vectorii si calculul cu acestia. 
 La introducerea query-urilor este creata o matrice care are cuvintele 
