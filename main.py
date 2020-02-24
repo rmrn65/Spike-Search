@@ -3,9 +3,8 @@ from os.path import isfile, join
 import re
 import numpy as np
 import sys,getopt
-mypath = "documente_problema/"
-onlyfiles = [f for f in listdir(mypath) if isfile(join(mypath, f))]
-onlyfiles.sort()
+# mypath = "documente_problema/"
+
 
 # imi separa query-ul in componentele necesare
 def splitter(words_str):
@@ -55,25 +54,25 @@ def negate(arr):
 		else:
 			arra.append(1)
 	return arra
-def word_into_arr(word,dictlist):
+def word_into_arr(word,dictlist,onlyfiles,mypath):
 	arr = []
 	for f in onlyfiles:
 		f = mypath + f
 		arr.append(dictlist[word][f])
 	return arr
-def query(element,index,dictlist,negation,words):
+def query(element,index,dictlist,negation,words,onlyfiles,mypath):
 	arrxy = []
 	and_op = 0
 	or_op = 0
 	rez = []
 	while index < len(element):
 		if element[index] in words:
-			a = word_into_arr(element[index],dictlist)
+			a = word_into_arr(element[index],dictlist,onlyfiles,mypath)
 			arrxy.append(a)
 		if element[index] == "!":
 			negation = 1
 		if element[index] == "(" :
-			inf = query(element,index + 1,dictlist,negation,words)
+			inf = query(element,index + 1,dictlist,negation,words,onlyfiles,mypath)
 			if element[index-1] == "!":
 				negation = 0
 			arrxy.append(inf[0])
@@ -99,9 +98,12 @@ def query(element,index,dictlist,negation,words):
 	return info
 
 ##############################
-def main(argv):
+def main(argv,mypath): # mypath parameter
+	onlyfiles = [f for f in listdir(mypath) if isfile(join(mypath, f))]
+	onlyfiles.sort()
 	words_str = str(argv)
 	words = re.findall(r'\w+',words_str)
+
 	# compose de dictionary
 	dictlist = {}
 	for word in words:
@@ -120,18 +122,18 @@ def main(argv):
 	split = splitter(words_str)
 	print(split)
 	a=[]
-	searched=""
+	searched=[]
 	if len(split) == 1:
-		a = word_into_arr(split[0],dictlist)
+		a = word_into_arr(split[0],dictlist,onlyfiles,mypath)
 		file_arr = a[0]
 	else:
-		a = query(split,0,dictlist,0,words)
+		a = query(split,0,dictlist,0,words,onlyfiles,mypath)
 		file_arr = a[0]
 	for i in range(len(file_arr)):
 		if file_arr[i] == 1:
-			searched += str(onlyfiles[i]) + "\n"
-	if searched == "":
-		return "No results"
+			searched.append(onlyfiles[i])
+	if searched == []:
+		searched = "No results"
 	return searched
 # arr=[]
 # for word in words:
