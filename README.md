@@ -5,30 +5,30 @@ fisierele dintr-un director prestabilit de utilizator
 ## Necesitati
 Pentru ca totul sa functioneze in parametrii normali trebuie ca
 in cazul in care nu ai instalat pip3 sa inserezi urmatoarea comanda
-...
+```
 sudo apt install python3-pip
-...
+```
 Pentru a verifica daca s-a instalat introdu comanda
-...
+```
 pip3 --version
 pip 18.1 from /usr/lib/python3/dist-packages/pip (python 3.7)
-...
+```
 
 ## Instalare si rulare
 Pentru a instala aplicatia trebuie rulata comanda 
-...
+```
 make config
 make build
-...
+```
 In urma rularii comenzi se va crea un executabil Spike-Search
 Pentru rulare se va introduce comanda  
-...
+```
 make run 
-...
+```
 sau
-...
+```
 ./Spike-Search
-...
+```
 ## Utilizare 
 Dupa rularea aplicatiei prima fereastra va cere un numele folderului 
 in care se afla fiseirele in care vrei sa cauti.
