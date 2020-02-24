@@ -30,7 +30,7 @@ class Window(QWidget):
 
 
     def showDialog(self):
-        text, ok = QInputDialog.getText(self, 'Input Dialog', 'Ennter folder:')
+        text, ok = QInputDialog.getText(self, 'Input Dialog', 'Enter folder:')
         if ok:
             mypath = str(text) 
         self.setGeometry(300, 300, 290, 150)
@@ -84,7 +84,7 @@ class Window(QWidget):
             if rez == "No results":
                 item = '<p> No results <p>'
             else:
-                item = item + '<p><a href = {}>{}</p>'.format(mypath + rez[i],rez[i])
+                item = item + '<p><a href = {}>{}</p>'.format(mypath +'/'+ rez[i],rez[i])
 
         self.label.setText(item)
   ###########################################
