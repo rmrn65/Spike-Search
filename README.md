@@ -36,12 +36,15 @@ in care se afla fiseirele in care vrei sa cauti.
 **Atentie folderul nu trebuie sa contina la final caracterul "/", 
 aplicatia stie deja ca este vorba despre un folder sau o cale absoluta
 catre unul**
+
 *Exemplu*
   *Enter folder: documente_problema*
+  
 In bara urmatoare veti putea cauta cuvintele, iar prin apasarea lui
 Enter sau butonului de Search veti primi linkuri catre fisierele care
 contin stringul coresupnzator cautarii. La apasarea acestor linkuri, 
 documentul va fi deschis
+  
   *Exemplu*
    *input: (smart && dum) [apasa Enter sau butonul Search]*
    *output: doc01.txt*
