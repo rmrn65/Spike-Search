@@ -43,8 +43,9 @@ Enter sau butonului de Search veti primi linkuri catre fisierele care
 contin stringul coresupnzator cautarii. La apasarea acestor linkuri, 
 documentul va fi deschis
   *Exemplu*
-   *input: (smart && dum) [apasa Enter sau butonul Search]
-   *output: doc01.txt
+   *input: (smart && dum) [apasa Enter sau butonul Search]*
+   *output: doc01.txt*
+   
 _Ii doresc bafta lui Dorin si sper sa puna vorba aia buna mentorilor :)_
 
 
