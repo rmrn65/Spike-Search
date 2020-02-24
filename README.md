@@ -37,14 +37,14 @@ in care se afla fiseirele in care vrei sa cauti.
 aplicatia stie deja ca este vorba despre un folder sau o cale absoluta
 catre unul**
 >*Exemplu*
-  >Enter folder: documente_problema
+  <Enter folder: documente_problema
 In bara urmatoare veti putea cauta cuvintele, iar prin apasarea lui
 Enter sau butonului de Search veti primi linkuri catre fisierele care
 contin stringul coresupnzator cautarii. La apasarea acestor linkuri, 
 documentul va fi deschis
   >*Exemplu*
-    >(smart && dum) 
-    >output: doc01.txt
+    (smart && dum) 
+   <output: doc01.txt
 _Ii doresc bafta lui Dorin si sper sa puna vorba aia buna mentorilor :)_
 
 
